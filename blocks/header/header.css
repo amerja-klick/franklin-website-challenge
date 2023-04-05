@@ -8,14 +8,39 @@ header .nav-wrapper {
 
 header nav {
   box-sizing: border-box;
-  display: grid;
   align-items: center;
-  gap: 0 2em;
   margin: auto;
   max-width: 1264px;
   height: var(--nav-height);
   padding: 0 1rem;
   font-family: var(--body-font-family);
+}
+
+header .nav-sections {
+  display: flex;
+}
+
+header .nav-brand {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav-brand p {
+  font-size: 14px;
+}
+
+header .nav-brand ul{
+   display: flex;
+    flex-direction: row;
+    list-style: none;
+    font-size: 14px
+}
+
+header .nav-brand ul li{
+  font-size: 14px;
+  padding-left: 20px;
 }
 
 header nav[aria-expanded="true"] {
@@ -30,11 +55,6 @@ header nav[aria-expanded="true"] {
 }
 
 @media (min-width: 900px) {
-  header nav {
-    display: flex;
-    justify-content: space-between;
-  }
-
   header nav[aria-expanded="true"] {
     min-height: 0;
     overflow: visible;
