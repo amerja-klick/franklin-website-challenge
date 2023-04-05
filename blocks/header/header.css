@@ -9,9 +9,6 @@ header .nav-wrapper {
 header nav {
   box-sizing: border-box;
   display: grid;
-  grid-template:
-    'hamburger brand tools' var(--nav-height)
-    'sections sections sections' 1fr / auto 1fr auto;
   align-items: center;
   gap: 0 2em;
   margin: auto;
@@ -22,10 +19,6 @@ header nav {
 }
 
 header nav[aria-expanded="true"] {
-  grid-template:
-    'hamburger brand' var(--nav-height)
-    'sections sections' 1fr
-    'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100vh;
 }
@@ -138,9 +131,36 @@ header nav[aria-expanded="true"] .nav-hamburger-icon::after {
   }
 }
 
+/* Sub header */
+header .nav-subnav-text p {
+  font-size: .694em;
+  line-height: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  margin-top: 14px;
+  color: #53565a;
+}
+
+header .nav-subnav-links {
+  flex: 1;
+}
+
+header .nav-subnav-links ul {
+  display: flex;
+}
+
+header .nav-subnav-links ul li a {
+  color: #471d7c;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .777em;
+  line-height: 32px;
+  font-weight: 600;
+}
+
 /* brand */
 header .nav-brand {
-  grid-area: brand;
   flex-basis: 128px;
   font-size: var(--heading-font-size-s);
   font-weight: 700;
