@@ -102,6 +102,16 @@ export default async function decorate(block) {
     const nav = document.createElement('nav');
     nav.id = 'nav';
     nav.innerHTML = html;
+    
+    // wrap each child element in a separate div element
+for (let i = 0; i < nav.children.length; i++) {
+  const child = nav.children[i];
+  const div = document.createElement('div');
+  div.innerHTML = child.innerHTML;
+  child.innerHTML = '';
+  child.appendChild(div);
+  div.classList.add('nav-child');
+}
 
     const classes = ['brand', 'sections'];
     classes.forEach((c, i) => {
@@ -109,7 +119,8 @@ export default async function decorate(block) {
       if (section) section.classList.add(`nav-${c}`);
     });
 
-    const navSections = nav.querySelector('.nav-sections');
+
+    const navSections = nav.querySelector('.nav-sections .nav-child');
     if (navSections) {
       navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
         if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');

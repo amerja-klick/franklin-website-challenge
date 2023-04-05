@@ -15,10 +15,35 @@ main .hero {
 }
 
 main .hero h1 {
-  max-width: 1071px;
   margin-left: auto;
   margin-right: auto;
-  color: white;
+  position: relative;
+  display: flex;
+  font-size: .5em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1px 8px 0;
+  z-index: 0;
+  justify-content: flex-end;
+  max-width: 960px;
+}
+
+main .default-content-wrapper h1 a {
+  background: #fff;
+    border: 0;
+    color: #471d7c;
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 20.7px;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-decoration: none;
+    padding: 10px 30px 12px;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
 }
 
 main .hero picture {
@@ -26,14 +51,17 @@ main .hero picture {
   z-index: -1;
   top: 0;
   left: 0;
-  bottom: 0;
+  bottom: auto;
   right: 0;
-  object-fit: cover;
-  box-sizing: border-box;
+  display: flex;
+  background: hsla(250, 63%, 23%, 1);
+  background: -webkit-linear-gradient(0deg, hsl(250.4deg 64.1% 22.94%) 50%, hsla(263, 100%, 14%, 1) 100%);
 }
 
 main .hero img {
   object-fit: cover;
   width: 100%;
   height: 100%;
+  max-width: 70%;
+  margin: auto;
 }
