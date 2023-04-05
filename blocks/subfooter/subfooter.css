@@ -1,0 +1,31 @@
+.sub > div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .sub > div > div {
+    order: 1;
+  }
+  
+  .sub > div > .sub-img-col {
+    order: 0;
+  }
+  
+  .sub > div > .sub-img-col img {
+    display: block;
+  }
+  
+  @media (min-width: 900px) {
+    .sub > div {
+      align-items: center;
+      flex-direction: unset;
+      gap: 32px;
+    }
+  
+    .sub > div > div {
+      flex: 1;
+      order: unset;
+    }
+  }
+  

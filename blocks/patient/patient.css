@@ -1,0 +1,50 @@
+.patient > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+ .patient h2 {
+    font-size: 27px;
+    line-height: 32.2px;
+    font-weight: 700;
+    color: #471d7c;
+    margin: 5px auto 15px;
+ }
+
+ .patient p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.1px;
+    margin-bottom: 17px;
+    color: #333;
+ }
+  
+ .default-content-wrapper p {
+    font-size: 13px;
+ }
+  
+  .patient > div > div {
+    order: 1;
+  }
+  
+  .patient > div > .patient-img-col {
+    order: 0;
+  }
+  
+  .patient > div > .patient-img-col img {
+    display: block;
+  }
+  
+  @media (min-width: 900px) {
+    .patient > div {
+      align-items: center;
+      flex-direction: unset;
+      gap: 32px;
+    }
+  
+    .patient > div > div {
+      flex: 1;
+      order: unset;
+    }
+  }
+  

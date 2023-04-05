@@ -1,0 +1,78 @@
+.efficacy > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .efficacy.block.efficacy-2-col {
+    display: flex;
+  }
+
+ .efficacy h2 {
+    font-size: 27px;
+    line-height: 32.2px;
+    font-weight: 700;
+    color: #471d7c;
+    margin: 5px auto 15px;
+ }
+
+ .efficacy p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22.1px;
+    margin-bottom: 17px;
+    color: #333;
+ }
+  
+  .efficacy > div > div {
+    order: 1;
+  }
+  
+  .efficacy > div > .efficacy-img-col {
+    order: 0;
+  }
+  
+  .efficacy > div > .efficacy-img-col img {
+    display: block;
+  }
+
+  .efficacy.block.efficacy-1-col > div > div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  .efficacy.block.efficacy-1-col > div > div p {
+    margin-left: 10px;
+  }
+  
+
+  .efficacy.block.efficacy-1-col > div > div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    padding: 10px;
+    float: none;
+    display: inline-block;
+    text-align: center;
+    transition: .2s all;
+    box-shadow: 5px 5px 21px #818181;
+    background-size: 21px;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  @media (min-width: 900px) {
+    .efficacy > div {
+      align-items: center;
+      flex-direction: unset;
+      gap: 32px;
+    }
+  
+    .efficacy > div > div {
+      flex: 1;
+      order: unset;
+    }
+  }
+
+
+  

@@ -133,27 +133,29 @@ a:hover {
 
 /* buttons */
 a.button:any-link, button {
-  font-family: var(--body-font-family);
-  display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
+  border: 2px solid #471d7c;
+  border-radius: 10px;
+  padding: 10px 25px 12px;
+  font-family: SourceSans,sans-serif;
   font-weight: 600;
+  font-size: 18px;
+  line-height: 20.7px;
+  background: #471d7c;
+  margin: 0 auto;
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
+  margin-bottom: 0;
+  min-width: 220px;
+  box-shadow: 0 6px 15px rgba(72,44,123,.3);
+  align-items: center;
 }
 
 a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
+  background-color: white;
+  color: #471d7c;;
   cursor: pointer;
 }
 
@@ -232,7 +234,7 @@ main .section {
 
 @media (min-width: 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 1071px;
     margin: auto;
   }
 }
